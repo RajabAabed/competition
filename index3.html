@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Competition Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="fireworks-container">
+      <!-- Add fireworks effect here -->
+    </div>
+
+    <div class="main-container">
+      <div id="score-container">
+        <h2>
+          الدرجة الفريق الاول:
+          <sanp id="score1">0</sanp>
+        </h2>
+        <h2>
+          الدرجة الفريق الثاني:
+          <span id="score2">0</span>
+        </h2>
+      </div>
+
+      <div id="type-g-auestion">
+        <h3 id="type-g-q"></h3>
+      </div>
+      <div id="question-container">
+        <h2 id="group-name"></h2>
+        <p id="question-text"></p>
+        <div id="answer-options">
+          <!-- <button class="answer-option"></button>
+          <button class="answer-option"></button>
+          <button class="answer-option"></button>
+          <button class="answer-option"></button> -->
+        </div>
+      </div>
+
+      <div id="timer-container">
+        <span>الوقت: </span>
+        <span id="timer">30</span>
+        <button id="reset-timer">أعادة الوقت</button>
+      </div>
+
+      <div id="controls-container">
+        <button id="back-to-main" onclick="window.location.href ='index.html'">
+          الرجوع للرئيسية
+        </button>
+        <button id="delete-answers">حذف اجابة</button>
+        <button id="ask-friend">الاستعانة بالاحتياط</button>
+        <button id="next-question">السؤال التالي</button>
+      </div>
+    </div>
+
+    <audio id="correct-sound" src="fireworks.mp3"></audio>
+    <!-- <audio id="wrong-sound" src="wrong.mp3"></audio> -->
+    <audio id="applause-sound" src="applause.mp3"></audio>
+    <!-- jQuery -->
+
+    <div id="finalpopup" class="popup">
+      <div class="pop-container">
+        <span id="popupClose" class="popup-close">&times;</span>
+        <p>المجموع الكلي للنقاط</p>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          "
+        >
+          <span>
+            نقاط الفريق الاول
+            <h5 id="point1-text"></h5
+          ></span>
+          <span>
+            نقاط الفريق الثاني
+            <h5 id="point2-text"></h5
+          ></span>
+        </div>
+
+        <span
+          >الفريق الفائز
+          <h5 id="winner-text"></h5
+        ></span>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          "
+        >
+          <button id="back-meet" onclick="backMain()">الرجوع للرئيسية</button>
+          <button id="back-group" onclick="backGroup()">
+            الرجوع للمجموعات
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="alertpopup" class="popup">
+      <div class="pop-container" id="pop-container-alert">
+        <span id="popupClose" class="popup-close">&times;</span>
+        <i
+          id="circle-check"
+          class="fa-regular fa-circle-check"
+          style="color: green"
+        ></i>
+        <i
+          id="circle-xmark"
+          class="fa-regular fa-circle-xmark"
+          style="color: red"
+        ></i>
+        <p id="alerttext"></p>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jQuery AJAX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js"></script>
+    <script src="questions.js"></script>
+    <script src="particles.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
