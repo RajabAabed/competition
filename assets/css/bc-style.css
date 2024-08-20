@@ -1,11 +1,11 @@
 /* Arabic Style */
 @font-face {
   font-family: "IBMPlexSansArabic";
-  src: url("IBMPlexSansArabic-SemiBold.ttf");
+  src: url("../fonts/IBMPlexSansArabic-SemiBold.ttf");
 }
 body {
   text-align: right;
-  background-image: url("ss.png");
+  background-image: url("../images/ss.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -47,7 +47,42 @@ h2 {
 a {
   text-decoration: none;
 }
+.main-str {
+  display: flex;
+  flex-direction: row;
+}
 
+.question-container-str {
+  width: 70%;
+  height: 100vh;
+}
+
+.actions-container-str {
+  width: 30%;
+  height: 100vh;
+}
+.bg-containrer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/cover-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+button.btn-start {
+  width: 32%;
+  height: 12%;
+  position: absolute;
+  bottom: 10px;
+  right: 50%;
+  border: none;
+  transform: translateX(50%);
+  border-radius: 66px;
+  box-shadow: 1px 1px 6px 6px #ffffff45;
+  background: #018792;
+  font-size: 35px;
+  color: #fff;
+}
 #question-container {
   /* display: none; */
   /* margin: 20px 0; */
